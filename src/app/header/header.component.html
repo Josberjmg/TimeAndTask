@@ -1,0 +1,12 @@
+<div class="header-container">
+    <div class="header-icon">
+      <lucide-icon name="clock" size="85" class="icon"></lucide-icon>
+    </div>
+    <div class="digital-clock">{{ currentTime }}</div>
+    <h1 class="title">TimeAndTask</h1>
+    <p class="header-date">{{ currentDate }}</p>
+    <button (click)="signOut()" class="header-button">
+      Cerrar Sesión
+    </button>
+    <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro" class="toggle-dark-mode"></lucide-icon>
+  </div>

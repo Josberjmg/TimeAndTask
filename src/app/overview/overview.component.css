@@ -1,0 +1,63 @@
+.overview-container {
+    margin-top: auto;
+    background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0 4px 600px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  
+  .overview-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: auto;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #4f46e5; /* Indigo-600 */
+  }
+  
+  .overview-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .stat {
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .total-tasks {
+    background-color: #ebf8ff; /* Blue-50 */
+    border-radius: 3rem;
+  }
+  
+  .completed-tasks {
+    background-color: #d1fae5; /* Green-50 */
+    border-radius: 3rem;
+  }
+  
+  .total-minutes {
+    background-color: #f3e8ff; /* Purple-50 */
+    border-radius: 3rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .stat-label {
+    color: #6b7280; /* Gray-600 */
+  }

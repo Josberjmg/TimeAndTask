@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: "Poppins";
+    margin: 0;
+}
+body,
+body.dark-mode {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.card,
+.task-form,
+.overview-container,
+.digital-clock,
+.card-header,
+.task-list,
+.total-tasks,
+.completed-tasks,
+.total-minutes,
+.input,
+.input-title,
+.input-description,
+.input-number,
+.input-date,
+.button,
+.container,
+.title,
+.button:hover,
+.toggle-dark-mode,
+.toggle-dark-mode:hover
+ {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .card,
+body.dark-mode .task-form,
+body.dark-mode .task-list,
+body.dark-mode .overview-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #121212;
+}
+
+body.dark-mode .total-tasks,
+body.dark-mode .completed-tasks,
+body.dark-mode .total-minutes {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-radius: 3rem;
+}
+
+body.dark-mode .digital-clock {
+    color: #4f46e5;
+    /* Indigo-600 */
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .input,
+body.dark-mode .input-title,
+body.dark-mode .input-description,
+body.dark-mode .input-number,
+body.dark-mode .input-date {
+    background-color: #414040;
+    color: #ffffff;
+    border-color: #414040;
+}
+
+body.dark-mode .title {
+    color: #8b97aa
+}
+body.dark-mode .button {
+    background-color: #4f46e5;
+    color: #ffffff;
+}
+body.dark-mode .button:hover {
+    background-color: #3028cf;
+}
+
+body.dark-mode .toggle-dark-mode {
+    color: #4f46e5;
+}
+
+body.dark-mode .toggle-dark-mode:hover {
+    color: #aea6e0;
+}
+
+.toggle-dark-mode {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #4f46e5;
+    cursor: pointer;
+}
+
+.toggle-dark-mode:hover {
+    color: #3d318f;
+}
+body.dark-mode .input-title:focus,
+body.dark-mode .input-description:focus,
+body.dark-mode .input-date:focus,
+body.dark-mode .input-number:focus{
+    border-color: #4f46e5; /* Indigo-500 */
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+body.dark-mode .task-item,
+body.dark-mode .task-items{
+    background-color: #2e2d2d;
+    color: #ffffff;
+}
+body.dark-mode .not-completed{
+    color: #ffffff;
+}

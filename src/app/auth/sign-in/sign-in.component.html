@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <div class="icon">
+                <lucide-icon name="user" [size]="67" class="icon-style"></lucide-icon>
+            </div>
+            <h1 class="title">Bienvenido!</h1>
+            <p class="subtitle">Inicia sesión para gestionar tu tiempo de forma eficaz</p>
+        </div>
+        <form [formGroup]="formValue" (submit)="signIn()" class="form">
+            <div class="form-group">
+                <label class="label">Correo electronico</label>
+                <input type="email" class="input" formControlName="email" required />
+            </div>
+            <div class="form-group">
+                <label class="label">Contraseña</label>
+                <input type="password" class="input" formControlName="password" required />
+            </div>
+            <button type="(submit)" class="button">Iniciar Sesión</button>
+        </form>
+
+        <div class="footer">
+            <button (click)="IrASignUp()" class="toggle-button">¿No tienes una cuenta? Regístrate</button>
+        </div>
+    </div>
+    <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro" class="toggle-dark-mode"></lucide-icon>
+</div>

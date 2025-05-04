@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <div class="icon">
+                <lucide-icon name="lock" [size]="67" class="icon-style"></lucide-icon>
+            </div>
+            <h1 class="title">Create una Cuenta</h1>
+            <p class="subtitle">Únete a nosotros para comenzar a administrar tu tiempo.</p>
+        </div>
+ 
+        <form [formGroup]="formValue" (submit)="signUp()" class="form">
+            <div class="form-group">
+                <label class="label">Nombre de usuario</label>
+                <input formControlName="name" type="name" class="input" required/>
+            </div>
+            <div class="form-group">
+                <label class="label">Correo electronico</label>
+                <input formControlName="email" type="email" class="input" required/>
+            </div>
+            <div class="form-group">
+                <label class="label">Contraseña</label>
+                <input formControlName="password" type="password" class="input" required/>
+            </div>
+            <button type="submit" class="button">Registrarte</button>
+        </form>
+        <div class="footer">
+            <button (click)="goToSignIn()" class="toggle-button">¿Ya tienes una cuenta? Iniciar sesión</button>
+        </div>
+    </div>
+    <div class="container">
+        <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro" class="toggle-dark-mode"></lucide-icon>
+      </div>
+</div>
+

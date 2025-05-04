@@ -1,0 +1,92 @@
+<body class="container">
+
+
+    <app-header></app-header>
+    <div class="tasks-container">
+        <div class="task-form">
+            <div class="task-header">
+                <lucide-icon name="clipboard-plus" class="icon"></lucide-icon>
+                <h2 class="task-title">Añadir nueva actividad</h2>
+            </div>
+
+            <form [formGroup]="formValue" (submit)="addActivity()" class="task-form-body">
+                <div class="form-row">
+                    <div> 
+                        <input formControlName="title" [(ngModel)]="newActivity.title" name="title" placeholder="Titulo" class="input-title"required />
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    
+                    <div class="form-group">
+                        <input formControlName="date" type="date" [(ngModel)]="newActivity.date" name="Fecha" class="input-date" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <input formControlName="description" [(ngModel)]="newActivity.description" name="description" placeholder="descripción"
+                            class="input-description" />
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    
+                    <div class="form-group">
+                        <input formControlName="duration" [(ngModel)]="newActivity.duration" placeholder="Minutos" class="input-number"
+                            type="number" name="duración" />
+                    </div>
+                </div>
+
+                <button type="submit" class="button">
+                    Añadir actividad
+                </button>
+            </form>
+        </div>
+
+        <div class="task-list">
+            <div class="task-header">
+                <lucide-icon name="calendar" class="icon"></lucide-icon>
+                <h2 class="task-title">Actividades</h2>
+            </div>
+
+            <div class="task-items">
+                <p *ngIf="activitys.length === 0" class="no-tasks">Sin actividades agregadas</p>
+                <div *ngFor="let activity of activitys" class="task-item">
+                    <div class="task-info">
+                        <input type="checkbox" [checked]="activity.completed" (change)="toggleActivity(activity)"
+                            class="checkbox" />
+                        <div>
+                            <p [ngClass]="{ 'completed': activity.completed, 'not-completed': !activity.completed }">
+                                {{ activity.title }}
+                            </p>
+                            <p class="task-meta">
+                                {{ activity.duration }} minutos •
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-overview></app-overview>
+</body>
