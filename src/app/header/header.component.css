@@ -1,105 +1,121 @@
-.overview-container {
-    margin-top: auto;
-    background-color: white;
-    border-radius: 3rem;
-    box-shadow: 0 4px 600px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+.header-container {
+    text-align: center;
   }
   
-  .overview-header {
+  .header-icon {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: auto;
-  }
-  
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #4f46e5; /* Indigo-600 */
-  }
-  
-  .overview-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  
-  .overview-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    text-align: center;
-  }
-  
-  .stat {
-    padding: 0.1rem;
-    border-radius: 0.5rem;
-  }
-  
-  .total-tasks {
-    background-color: #ebf8ff; /* Blue-50 */
-    border-radius: 3rem;
-  }
-  
-  .completed-tasks {
-    background-color: #d1fae5; /* Green-50 */
-    border-radius: 3rem;
-  }
-  
-  .total-minutes {
-    background-color: #f3e8ff; /* Purple-50 */
-    border-radius: 3rem;
-  }
-  
-  .stat-value {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .stat-label {
-    color: #6b7280; /* Gray-600 */
-  }
-  @media (max-width: 360px) {
-  .overview-container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 0.8rem;
-    border-radius: 1.5rem;
-  }
-
-  .overview-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.25rem;
+    justify-content: center;
     margin-bottom: 1rem;
   }
+  
+  .digital-clock {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #4f46e5; /* Indigo-600 */
+    border-radius: 2rem;
+    margin-left: 4rem;
+    
+}
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #4f46e5; /* Indigo-600 */
+    justify-content: center;
+    margin-right: 3rem;
+  }
+  
+.icon-add {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #322d92; /* Indigo-600 */
+    justify-content: center;
+  }
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #87a4cc; /* Gray-800 */
+    margin-bottom: 0.1rem;
+    margin-top: 2.5rem;
+  }
+  .header-date {
+    margin-top: -0.5rem;
+    color: #6b7280; /* Gray-600 */
+  }
+  .header-button {
+    color: #5a67d8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .header-button:hover {
+    color: #3730a3; /* Indigo-800 */
+  }
+  .button {
+    width: 12%;
+    background-color: #4f46e5; /* Indigo-600 */
+    color: white;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.2s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto ;
+  }
+  .button:hover {
+    background-color: #4338ca; /* Indigo-700 */
+  }
+  @media (max-width: 360px) {
+  .header-container {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .header-icon {
+    margin-bottom: 0.5rem;
+  }
 
   .icon {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 3.6rem;
+    margin-left: 0;
   }
 
-  .overview-title {
-    font-size: 1rem;
+  .icon-add {
+    width: 5rem;
+    height: 2.5rem;
   }
 
-  .overview-stats {
-    
-    gap: 0.05rem;
+  .digital-clock {
+    position: static;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    margin-left: -13.3rem;
+    margin-top: -0.6rem;
   }
 
-  .stat {
-    padding: 0.2rem;
+  .title {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .stat-value {
-    font-size: 1.5rem;
+  .header-date {
+    font-size: 0.9rem;
   }
-
-  .stat-label {
-    font-size: 0.7rem;
+  .button {
+    width: 40%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
   }
 }

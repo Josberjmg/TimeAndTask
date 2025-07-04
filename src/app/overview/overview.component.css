@@ -61,3 +61,45 @@
   .stat-label {
     color: #6b7280; /* Gray-600 */
   }
+  @media (max-width: 360px) {
+  .overview-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .overview-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .overview-title {
+    font-size: 1rem;
+  }
+
+  .overview-stats {
+    
+    gap: 0.05rem;
+  }
+
+  .stat {
+    padding: 0.2rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+}
