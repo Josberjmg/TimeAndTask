@@ -106,49 +106,9 @@
 .toggle-button:hover {
   color: #2c5282;
 }
-
-@media (max-width: 360px) {
-  .card {
-    padding: 1.5rem 1rem;
-    max-width: 100%;
-    border-radius: 0.75rem;
-  }
+@media (max-width: 450px) {
   .icon{
     margin-right: 1rem;
   }
-  .icon-style {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .title {
-    font-size: 1.25rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
-  .label {
-    font-size: 0.8rem;
-  }
-
-  .input {
-    padding: 0.4rem 0.4rem;
-    font-size: 0.9rem;
-  }
-
-  .button {
-    padding: 0.45rem;
-    font-size: 0.95rem;
-  }
-
-  .footer {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-  }
-
-  .toggle-button {
-    font-size: 0.8rem;
-  }
+  
 }

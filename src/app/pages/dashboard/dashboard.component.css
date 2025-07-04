@@ -261,7 +261,7 @@
   background: #fff;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   .search-bar {
     flex-direction: column;
     gap: 0.5rem;
@@ -305,7 +305,7 @@
 .custom-checkbox:hover {
   border-color: #1976d2;
 }
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .tasks-container {
     flex-direction: column;
     margin: 1rem 0.5rem;

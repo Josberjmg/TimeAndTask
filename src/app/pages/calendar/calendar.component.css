@@ -248,7 +248,7 @@
   color: white;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   .calendar-header {
     flex-wrap: wrap;
     justify-content: center;

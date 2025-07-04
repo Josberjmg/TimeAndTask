@@ -61,7 +61,7 @@
   .stat-label {
     color: #6b7280; /* Gray-600 */
   }
-  @media (max-width: 360px) {
+  @media (max-width: 450px) {
   .overview-container {
     margin-left: 1rem;
     margin-right: 1rem;
