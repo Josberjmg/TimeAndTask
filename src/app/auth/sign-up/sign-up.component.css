@@ -107,3 +107,8 @@
   .toggle-button:hover {
     color: #2c5282;
   }
+  @media (max-width: 360px) {
+    .icon {
+      margin-right: 1rem;
+    }
+  }

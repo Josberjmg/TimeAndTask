@@ -12,27 +12,19 @@
       <lucide-icon name="chevron-right" size="20"></lucide-icon>
     </button>
     <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro"
-    class="toggle-dark-mode-calendaricon"></lucide-icon>
+      class="toggle-dark-mode-calendaricon"></lucide-icon>
   </div>
 
   <div class="calendar-grid">
     <div class="day-header" *ngFor="let day of ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']">
       {{ day }}
     </div>
-    <div
-      *ngFor="let day of calendarDays"
-      class="calendar-day"
-      [class.other-month]="!day.isCurrentMonth"
-      [class.today]="day.isToday"
-      [class.has-activities]="day.activities.length > 0"
-    >
+    <div *ngFor="let day of calendarDays" class="calendar-day" [class.other-month]="!day.isCurrentMonth"
+      [class.today]="day.isToday" [class.has-activities]="day.activities.length > 0">
       <div class="day-number">{{ day.date.getDate() }}</div>
       <div class="activities-container">
-        <div
-          *ngFor="let activity of day.activities | slice:0:2"
-          class="activity-indicator"
-          [style.background]="activity.completed ? '#10B981' : '#3B82F6'"
-        >
+        <div *ngFor="let activity of day.activities | slice:0:2" class="activity-indicator"
+          [style.background]="activity.completed ? '#10B981' : '#3B82F6'">
           <lucide-icon name="check-circle" size="14" class="activity-icon"></lucide-icon>
           <span class="activity-title">{{ activity.title }}</span>
         </div>
@@ -75,5 +67,5 @@
       </div>
     </div>
   </div>
-  
+
 </div>

@@ -107,13 +107,15 @@
   color: #2c5282;
 }
 
-@media (max-width: 412px) {
+@media (max-width: 360px) {
   .card {
     padding: 1.5rem 1rem;
     max-width: 100%;
     border-radius: 0.75rem;
   }
-
+  .icon{
+    margin-right: 1rem;
+  }
   .icon-style {
     width: 2.5rem;
     height: 2.5rem;
