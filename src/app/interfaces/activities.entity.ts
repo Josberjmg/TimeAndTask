@@ -2,7 +2,7 @@ export interface Activity {
     id?: string,
     title: string,
     description?: string,
-    duration: number,
+    duration: undefined,
     completed: boolean;
     date: Date,
 }

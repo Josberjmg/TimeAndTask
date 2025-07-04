@@ -7,19 +7,30 @@
             <h1 class="title">Create una Cuenta</h1>
             <p class="subtitle">Únete a nosotros para comenzar a administrar tu tiempo.</p>
         </div>
- 
+
         <form [formGroup]="formValue" (submit)="signUp()" class="form">
             <div class="form-group">
                 <label class="label">Nombre de usuario</label>
-                <input formControlName="name" type="name" class="input" required/>
+                <input formControlName="name" type="text" name="username" autocomplete="username" class="input"
+                    required />
+                <div *ngIf="formValue.get('name')?.hasError('pattern') && formValue.get('name')?.touched" class="error">
+                    El nombre solo puede contener letras y espacios.
+                </div>
             </div>
             <div class="form-group">
                 <label class="label">Correo electronico</label>
-                <input formControlName="email" type="email" class="input" required/>
+                <input formControlName="email" type="email" name="email" autocomplete="email" class="input" required />
+                <div *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched" class="error">
+                    Ingresa un correo electrónico válido.
+                </div>
             </div>
             <div class="form-group">
                 <label class="label">Contraseña</label>
-                <input formControlName="password" type="password" class="input" required/>
+                <input formControlName="password" type="password" class="input" required />
+                <div *ngIf="formValue.get('password')?.hasError('minlength') && formValue.get('password')?.touched"
+                    class="error">
+                    La contraseña debe tener al menos 8 caracteres.
+                </div>
             </div>
             <button type="submit" class="button">Registrarte</button>
         </form>
@@ -28,7 +39,7 @@
         </div>
     </div>
     <div class="container">
-        <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro" class="toggle-dark-mode"></lucide-icon>
-      </div>
+        <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro"
+            class="toggle-dark-mode"></lucide-icon>
+    </div>
 </div>
-

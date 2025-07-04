@@ -1,0 +1,79 @@
+<div class="calendar-container">
+  <div class="calendar-header">
+    <button (click)="goToDashboard()" class="nav-button"> Regresar</button>
+    <button class="nav-button" (click)="previousMonth()" title="Mes anterior">
+      <lucide-icon name="chevron-left" size="20"></lucide-icon>
+    </button>
+    <div class="month-year-container">
+      <lucide-icon name="calendar" size="28" class="calendar-icon"></lucide-icon>
+      <span class="month-year">{{ getMonthYearDisplay()| titlecase }}</span>
+    </div>
+    <button class="nav-button" (click)="nextMonth()" title="Mes siguiente">
+      <lucide-icon name="chevron-right" size="20"></lucide-icon>
+    </button>
+    <lucide-icon (click)="toggleDarkMode()" name="moon" size="30" title="Modo Oscuro"
+    class="toggle-dark-mode-calendaricon"></lucide-icon>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="day-header" *ngFor="let day of ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']">
+      {{ day }}
+    </div>
+    <div
+      *ngFor="let day of calendarDays"
+      class="calendar-day"
+      [class.other-month]="!day.isCurrentMonth"
+      [class.today]="day.isToday"
+      [class.has-activities]="day.activities.length > 0"
+    >
+      <div class="day-number">{{ day.date.getDate() }}</div>
+      <div class="activities-container">
+        <div
+          *ngFor="let activity of day.activities | slice:0:2"
+          class="activity-indicator"
+          [style.background]="activity.completed ? '#10B981' : '#3B82F6'"
+        >
+          <lucide-icon name="check-circle" size="14" class="activity-icon"></lucide-icon>
+          <span class="activity-title">{{ activity.title }}</span>
+        </div>
+        <div *ngIf="day.activities.length > 2" class="more-activities">
+          +{{ day.activities.length - 2 }} más
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-header">
+      <lucide-icon name="info" size="20" class="legend-header-lucide-icon"></lucide-icon>
+      <h3 class="legend-h3">Leyenda</h3>
+    </div>
+    <div class="legend-items">
+      <div class="legend-item">
+        <span class="legend-color" style="background: #3B82F6;">
+          <lucide-icon name="circle" size="16" class="legend-icon"></lucide-icon>
+        </span>
+        Actividad pendiente
+      </div>
+      <div class="legend-item">
+        <span class="legend-color" style="background: #10B981;">
+          <lucide-icon name="check-circle" size="16" class="legend-icon"></lucide-icon>
+        </span>
+        Actividad completada
+      </div>
+      <div class="legend-item">
+        <span class="legend-color-diaotromes">
+          <lucide-icon name="circle" size="16" class="legend-icon" style="color: #94a3b8;"></lucide-icon>
+        </span>
+        Día de otro mes
+      </div>
+      <div class="legend-item">
+        <span class="legend-color" style="background: linear-gradient(135deg, #3B82F6, #1d4ed8);">
+          <lucide-icon name="star" size="16" class="legend-icon"></lucide-icon>
+        </span>
+        Hoy
+      </div>
+    </div>
+  </div>
+  
+</div>

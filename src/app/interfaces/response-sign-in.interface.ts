@@ -1,6 +1,5 @@
-import { IUser } from "./user.entity";
-
-export interface ResponseSignIn{
-    user: IUser,
-    token: string,
+export interface ResponseSignIn {
+  name: string;
+  email: string;
+  token: string;
 }

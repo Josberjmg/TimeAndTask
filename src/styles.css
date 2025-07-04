@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'sweetalert2/dist/sweetalert2.min.css';
+
+
 body{
     font-family: "Poppins";
     margin: 0;
@@ -27,7 +29,8 @@ body.dark-mode {
 .title,
 .button:hover,
 .toggle-dark-mode,
-.toggle-dark-mode:hover
+.toggle-dark-mode:hover,
+.mi-alerta-oscura
  {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -38,6 +41,7 @@ body.dark-mode {
 }
 
 body.dark-mode .card,
+body.dark-mode .mi-alerta-oscura,
 body.dark-mode .task-form,
 body.dark-mode .task-list,
 body.dark-mode .overview-container {
@@ -67,7 +71,8 @@ body.dark-mode .input,
 body.dark-mode .input-title,
 body.dark-mode .input-description,
 body.dark-mode .input-number,
-body.dark-mode .input-date {
+body.dark-mode .input-date,
+body.dark-mode .input-search {
     background-color: #414040;
     color: #ffffff;
     border-color: #414040;
@@ -103,6 +108,75 @@ body.dark-mode .toggle-dark-mode:hover {
 .toggle-dark-mode:hover {
     color: #3d318f;
 }
+
+.toggle-dark-mode-calendar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #4f46e5;
+    cursor: pointer;
+    border: none;
+    margin-right: 1.8rem;
+}
+
+.toggle-dark-mode-calendar:hover {
+    color: #3d318f;
+}
+
+.toggle-dark-mode-calendaricon {
+    top: 1rem;
+    right: 1rem;
+    color: #4f46e5;
+    cursor: pointer;
+    border: none;
+    margin-right: 0.2rem;
+}
+
+.toggle-dark-mode-calendaricon:hover {
+    color: #e9e8f0;
+}
+
+body.dark-mode .calendar-container{
+    background-color: #1e1e1e;
+    color: #aaa8a8;
+}
+body.dark-mode .calendar-day,
+body.dark-mode .nav-button {
+    background-color: #444343;
+    border: 1px solid #3d3a3a;
+    color: #ffffff;
+}
+body.dark-mode .calendar-day:hover {
+    background-color: #4d4d4d;
+}
+body.dark-mode .calendar-day.other-month,
+body.dark-mode .calendar-grid,
+body.dark-mode .legend-color-diaotromes {
+    background-color: #353232;
+    background: #353232;
+}
+body.dark-mode .calendar-day.today {
+    background: #4f46e5;
+}
+body.dark-mode .day-number {
+    color: #dad9d9;
+}
+body.dark-mode .month-year,
+body.dark-mode .legend-h3{
+    color: #3028cf;
+}
+body.dark-mode .calendar-icon,
+body.dark-mode .legend-header-lucide-icon {
+    color: #3028cf;
+}
+body.dark-mode .day-header {
+    background: #4f46e5;
+}
+body.dark-mode .legend{
+    background-color: rgb(63, 57, 57)
+}
+
+
 body.dark-mode .input-title:focus,
 body.dark-mode .input-description:focus,
 body.dark-mode .input-date:focus,
@@ -115,7 +189,12 @@ body.dark-mode .task-item,
 body.dark-mode .task-items{
     background-color: #2e2d2d;
     color: #ffffff;
+    border-radius: 0.8rem;
 }
 body.dark-mode .not-completed{
     color: #ffffff;
+}
+
+body.dark-mode .custom-checkbox{
+    background:#2d2d2d;
 }

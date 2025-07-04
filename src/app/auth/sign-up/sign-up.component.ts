@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { ThemeService } from '../../services/darktheme.service';
 import { AuthService } from '../../services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,8 +21,8 @@ export default class SignUpComponent {
   fb = inject(FormBuilder);
   formValue = this.fb.group({
     email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.required]],
-    name: ['', [Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
+    name: ['', [Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$')]],
   });
 
   signUp() {
@@ -33,11 +34,17 @@ export default class SignUpComponent {
 
 
     this.authService.signUp({ name: name!, email: email!, password: password! }).subscribe((user)=>{
-      // todo: Mostrar u mensaje de registro exitoso
-      console.log({user})
-      this.goToSignIn()
-    })
-  }
+      Swal.fire({
+      icon: 'success',
+      title: '¡Registro exitoso!',
+      text: 'Tu cuenta ha sido creada correctamente. Ahora puedes iniciar sesión.',
+      confirmButtonText: 'Aceptar',
+      customClass: {popup: 'mi-alerta-oscura'}
+    }).then(() => {
+      this.goToSignIn();
+    });
+  });
+}
 
   goToSignIn() {
     this.router.navigate(['/auth/sign-in']);

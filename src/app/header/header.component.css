@@ -12,7 +12,7 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
-    font-size: 3.25rem;
+    font-size: 4vw;
     font-weight: bold;
     color: #4f46e5; /* Indigo-600 */
     border-radius: 2rem;
@@ -27,17 +27,23 @@
     margin-right: 3rem;
   }
   
+.icon-add {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #322d92; /* Indigo-600 */
+    justify-content: center;
+  }
   .title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #87a4cc; /* Gray-800 */
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
+    margin-top: 2.5rem;
   }
-  
   .header-date {
+    margin-top: -0.5rem;
     color: #6b7280; /* Gray-600 */
   }
-  
   .header-button {
     color: #5a67d8;
     font-size: 0.875rem;
@@ -47,7 +53,23 @@
     cursor: pointer;
     transition: color 0.2s;
   }
-  
   .header-button:hover {
     color: #3730a3; /* Indigo-800 */
+  }
+  .button {
+    width: 12%;
+    background-color: #4f46e5; /* Indigo-600 */
+    color: white;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.2s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto ;
+  }
+  .button:hover {
+    background-color: #4338ca; /* Indigo-700 */
   }

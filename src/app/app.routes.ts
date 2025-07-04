@@ -11,6 +11,10 @@ export const routes: Routes = [
         loadComponent: ()=> import("./pages/dashboard/dashboard.component"),
     },
     {
+        path: "calendar",
+        loadComponent: ()=> import("./pages/calendar/calendar.component").then(m => m.CalendarComponent),
+    },
+    {
         path: "auth",
         children: [
             {
