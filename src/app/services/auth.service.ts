@@ -4,12 +4,13 @@ import { Observable, tap } from 'rxjs';
 import { ResponseSignIn } from '../interfaces/response-sign-in.interface';
 import { SignUp } from '../interfaces/sign-up.interface';
 import { IUser } from '../interfaces/user.entity';
+import { environment } from '../../enviroments/enviroments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url = "http://localhost:3000/auth"
+  url = `${environment.apiUrl}/auth`;
   constructor(private http: HttpClient) { }
 
   get getToken() {

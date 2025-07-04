@@ -3,12 +3,13 @@ import { inject, Injectable } from "@angular/core";
 import { Activity } from "../interfaces/activities.entity";
 import { map, Observable, Subject } from "rxjs";
 import { AuthService } from "./auth.service";
+import { environment } from "../../enviroments/enviroments";
 
 @Injectable({
     providedIn: 'root'
 })
 export class ActivityService {
-    url = "http://localhost:3000/activities";
+    url = `${environment.apiUrl}/activities`;
     http = inject(HttpClient)
     authService = inject(AuthService)
     constructor() { }
