@@ -305,3 +305,95 @@
 .custom-checkbox:hover {
   border-color: #1976d2;
 }
+
+@media (max-width: 412px) {
+  .tasks-container {
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .task-form,
+  .task-list {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .task-header {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-bottom: -1rem;
+  }
+
+  .task-title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .input-title,
+  .input-description,
+  .input-date,
+  .input-number {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .task-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .task-meta {
+    font-size: 0.8rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .input-search {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-checkbox:checked::after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+  }
+}
