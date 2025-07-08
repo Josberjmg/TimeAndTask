@@ -3,11 +3,12 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { LucideAngularModule, User, Lock, ClipboardPlus, Calendar, History, Clock, Moon, Trash2, ChevronLeft, ChevronRight, CheckSquare, Bell, Users, Check, CheckCircle, Info, Circle, Star } from 'lucide-angular';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection(
-    { eventCoalescing: true }), 
+      { eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
     importProvidersFrom(LucideAngularModule.pick({
@@ -28,7 +29,12 @@ export const appConfig: ApplicationConfig = {
       CheckCircle,
       Info,
       Circle,
-      Star})),
-      { provide: LOCALE_ID, useValue: 'es' }
+      Star
+    })),
+    {  
+      provide:LocationStrategy && LOCALE_ID,
+      useClass:HashLocationStrategy,
+      
+      useValue: 'es' }
   ]
 };
